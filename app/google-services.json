@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "196280232808",
+    "firebase_url": "https://convertor-6693e.firebaseio.com",
+    "project_id": "convertor-6693e",
+    "storage_bucket": "convertor-6693e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196280232808:android:5fb1b038577ccdd49844dd",
+        "android_client_info": {
+          "package_name": "com.example.convertor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196280232808-aoig7giaeqcrbrar055r8jpfljt3pg7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfHh1O12PQOzsK7jITf3iFoeSNvrYXIus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196280232808-aoig7giaeqcrbrar055r8jpfljt3pg7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
