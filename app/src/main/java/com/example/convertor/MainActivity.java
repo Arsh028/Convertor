@@ -1,7 +1,4 @@
 package com.example.convertor;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -17,25 +14,15 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
-import com.google.firebase.ml.vision.FirebaseVision;
-import com.google.firebase.ml.vision.common.FirebaseVisionImage;
-import com.google.firebase.ml.vision.text.FirebaseVisionText;
-import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
 import com.theartofdev.edmodo.cropper.CropImage;
-import com.theartofdev.edmodo.cropper.CropImageActivity;
-import com.theartofdev.edmodo.cropper.CropImageView;
+
 
 public class MainActivity extends AppCompatActivity
 {
     Button choose_btn;
-    Button detect_btn;
     ImageView photo;
     Bitmap imageBitmap;
     String textObtained;
@@ -67,7 +54,6 @@ public class MainActivity extends AppCompatActivity
             Bundle extras = data.getExtras();
             imageBitmap = (Bitmap) extras.get("data");
             choose_btn.setVisibility(View.INVISIBLE);
-            detect_btn.setVisibility(View.VISIBLE);
             //photo.setImageBitmap(imageBitmap);
         }
         if(requestCode==CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE)
@@ -75,7 +61,7 @@ public class MainActivity extends AppCompatActivity
             CropImage.ActivityResult result=CropImage.getActivityResult(data);
             mImageUri=result.getUri();
             choose_btn.setVisibility(View.INVISIBLE);
-            detect_btn.setVisibility(View.VISIBLE);
+
             photo.setImageURI(mImageUri);
             BitmapDrawable bitmapDrawable = (BitmapDrawable)photo.getDrawable();
             Bitmap bitmap = bitmapDrawable.getBitmap();
@@ -155,6 +141,5 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         photo=(ImageView) findViewById(R.id.imageView);
         choose_btn=(Button) findViewById(R.id.takepic_btn);
-        detect_btn=(Button) findViewById(R.id.detect_btn);
     }
 }
