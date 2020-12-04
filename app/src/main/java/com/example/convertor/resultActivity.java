@@ -38,6 +38,7 @@ public class resultActivity extends AppCompatActivity
         Bundle bundle = getIntent().getExtras();
         String ans = bundle.getString("textResult");
         //String ans = intent.getStringExtra("textObtained");
+        Toast.makeText(getApplicationContext(),"text detected",Toast.LENGTH_SHORT).show();
         result=findViewById(R.id.result);
         result.setText(ans);
 

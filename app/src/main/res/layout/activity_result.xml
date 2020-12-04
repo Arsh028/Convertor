@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E00B2FF"
     tools:context=".resultActivity">
 
     <SeekBar
@@ -12,6 +13,7 @@
         android:layout_height="29dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="9dp"
+        android:background="@drawable/round_btn"
         android:progress="50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speed_textView" />
@@ -23,6 +25,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
         android:text="Speed"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pitch_seekBar" />
 
@@ -32,7 +35,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="17dp"
+
         android:text="Pitch"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 
@@ -42,6 +47,7 @@
         android:layout_height="29dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/round_btn"
         android:progress="50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pitch_textView" />
@@ -51,7 +57,8 @@
         android:layout_width="wrap_content"
         android:layout_height="54dp"
         android:layout_marginTop="28dp"
-        android:text="Output"
+        android:fontFamily="sans-serif-black"
+        android:text="Text detected"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -66,34 +73,35 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="250dp"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerText"
-        android:background="@android:color/transparent"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/say_it_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="63dp"
-        android:layout_marginEnd="260dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/round_btn"
         android:text="Say It"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/copyClipboard_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="172dp"
+        android:layout_height="54dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="52dp"
+        android:background="@drawable/round_btn"
         android:text="Copy to ClibBoard"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result" />
 

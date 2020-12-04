@@ -53,14 +53,14 @@ public class MainActivity extends AppCompatActivity
         {
             Bundle extras = data.getExtras();
             imageBitmap = (Bitmap) extras.get("data");
-            choose_btn.setVisibility(View.INVISIBLE);
+            //choose_btn.setVisibility(View.INVISIBLE);
             //photo.setImageBitmap(imageBitmap);
         }
         if(requestCode==CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE)
         {
             CropImage.ActivityResult result=CropImage.getActivityResult(data);
             mImageUri=result.getUri();
-            choose_btn.setVisibility(View.INVISIBLE);
+            //choose_btn.setVisibility(View.INVISIBLE);
 
             photo.setImageURI(mImageUri);
             BitmapDrawable bitmapDrawable = (BitmapDrawable)photo.getDrawable();
@@ -102,38 +102,10 @@ public class MainActivity extends AppCompatActivity
         }
         else if(resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
             //if there is any error show it
-            //Exception error = result.getError();
-            //Toast.makeText(this, ""+error, Toast.LENGTH_SHORT).show();
+
+            Toast.makeText(this, "There was an error please try again", Toast.LENGTH_SHORT).show();
         }
     }
-
-
-    /*public void detect(View view) {
-        Log.i(" DETECT Button pressed","true");
-        FirebaseVisionImage firebaseVisionImage = FirebaseVisionImage.fromBitmap(mImageUri);
-        FirebaseVisionTextRecognizer detector = FirebaseVision.getInstance()
-                .getOnDeviceTextRecognizer();
-        Log.i(" DETECT Button pressed","here");
-        detector.processImage(firebaseVisionImage).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
-            @Override
-            public void onSuccess(FirebaseVisionText firebaseVisionText) {
-                processTextRecognitionResult(firebaseVisionText);
-                String text=firebaseVisionText.getText();
-                Toast toast = Toast.makeText(getApplicationContext(),
-                        "ans is:",
-                        Toast.LENGTH_SHORT);
-
-                toast.show();
-
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                e.printStackTrace();
-            }
-        });
-        Log.i(" DETECT button over","true");
-    }*/
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

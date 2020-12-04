@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E00B2FF"
     android:visibility="visible"
     tools:context=".MainActivity">
 
@@ -21,7 +22,7 @@
         android:layout_width="203dp"
         android:layout_height="46dp"
         android:layout_marginBottom="96dp"
-        android:background="#000000"
+        android:background="@drawable/round_btn"
         android:onClick="crop"
         android:text="capture or select image"
         android:textColor="#FFFFFF"
